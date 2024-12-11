@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6s3d57svgijp"]
+
+[ext_resource type="Script" path="res://scenes/objects/plants/tomato.gd" id="1_1puge"]
+[ext_resource type="Texture2D" uid="uid://cky0x64wlorxf" path="res://assets/game/objects/basic_plants.png" id="2_ruqj4"]
+[ext_resource type="PackedScene" uid="uid://doi5gitk0lgvj" path="res://scenes/objects/plants/flowering_particles.tscn" id="3_7hmdj"]
+[ext_resource type="PackedScene" uid="uid://dn463oyuwuqqu" path="res://scenes/objects/plants/watering_particles.tscn" id="4_et3y2"]
+[ext_resource type="PackedScene" uid="uid://cosxq84qboxvq" path="res://scenes/objects/plants/growth_cycle_component.tscn" id="5_sgtt7"]
+[ext_resource type="PackedScene" uid="uid://t2a0ikjdqva3" path="res://scenes/components/hurt_component.tscn" id="6_qje0b"]
+[ext_resource type="PackedScene" uid="uid://cgcta3e1h5shk" path="res://scenes/components/save_data_component.tscn" id="7_wknmu"]
+[ext_resource type="Resource" uid="uid://cpkw23mt0ekvq" path="res://Resources/scene_data_resource.tres" id="8_32oe3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qo8gw"]
+size = Vector2(5.5, 5.5)
+
+[node name="Tomato" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-1, -7)
+script = ExtResource("1_1puge")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ruqj4")
+hframes = 6
+vframes = 2
+frame = 7
+
+[node name="FloweringParticles" parent="." instance=ExtResource("3_7hmdj")]
+position = Vector2(1, 4)
+
+[node name="WateringParticles" parent="." instance=ExtResource("4_et3y2")]
+position = Vector2(0, 4)
+
+[node name="GrowthCycleComponent" parent="." instance=ExtResource("5_sgtt7")]
+
+[node name="HurtComponent" parent="." instance=ExtResource("6_qje0b")]
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0.25, 4.25)
+shape = SubResource("RectangleShape2D_qo8gw")
+
+[node name="SaveDataComponent" parent="." instance=ExtResource("7_wknmu")]
+save_data_resource = ExtResource("8_32oe3")

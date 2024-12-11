@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cssxunjjuo7rs"]
+
+[ext_resource type="Texture2D" uid="uid://dijogbmta7qaa" path="res://assets/game/objects/milk_and_grass_item.png" id="1_4aekj"]
+[ext_resource type="PackedScene" uid="uid://cpft13t4lr1du" path="res://scenes/components/collectable_component.tscn" id="2_h38r7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lyvks"]
+radius = 7.0
+
+[node name="Milk" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_4aekj")
+hframes = 4
+frame = 2
+
+[node name="CollectableComponent" parent="." instance=ExtResource("2_h38r7")]
+collectable_name = "milk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_lyvks")

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://drlcy8768ce0b"]
+
+[ext_resource type="Script" path="res://Resources/node_data_resource.gd" id="1_q266a"]
+
+[resource]
+script = ExtResource("1_q266a")

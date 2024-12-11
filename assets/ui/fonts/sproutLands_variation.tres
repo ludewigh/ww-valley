@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://b3d8g3ng6akh4"]
+
+[ext_resource type="FontVariation" uid="uid://c8ls11qjywbah" path="res://assets/ui/fonts/zx_palm_variation.tres" id="1_hoqr0"]
+
+[resource]
+base_font = ExtResource("1_hoqr0")

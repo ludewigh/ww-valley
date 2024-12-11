@@ -1,0 +1,8 @@
+~ start
+Will: [[Hi|Hello|Howdy]], nice to meet you.
+Will: Welcome to your new farm.
+Will: As you can see the cows and chickens are hungry.
+Will: You need to grow some crops to feed them.
+Will: Here are soem seeds to grow some crops.
+do GameDialogueManager.action_give_crop_seeds()
+=> END

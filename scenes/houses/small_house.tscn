@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=4 uid="uid://bvrufa7xjppby"]
+
+[ext_resource type="TileSet" uid="uid://cebtjvosko2et" path="res://tilesets/house_tile_set.tres" id="1_igfgx"]
+
+[node name="LargeHouse" type="Node2D"]
+
+[node name="HouseTilemap" type="Node2D" parent="."]
+
+[node name="Floor" type="TileMapLayer" parent="HouseTilemap"]
+tile_map_data = PackedByteArray("AAACAP//AQABAAEAAAADAP7/AQABAAEAAAAEAP7/AQABAAEAAAAEAP3/AQABAAEAAAAEAPz/AQABAAEAAAADAPz/AQABAAEAAAACAPz/AQABAAEAAAABAPz/AQABAAEAAAAAAPz/AQABAAEAAAAAAP3/AQABAAEAAAAAAP7/AQABAAEAAAABAP7/AQABAAEAAAACAP7/AQABAAEAAAADAP3/AQABAAEAAAACAP3/AQABAAEAAAABAP3/AQABAAEAAAA=")
+tile_set = ExtResource("1_igfgx")
+
+[node name="Walls" type="TileMapLayer" parent="HouseTilemap"]
+tile_map_data = PackedByteArray("AAABAP//AQADAAIAAAAAAP//AQABAAIAAAD/////AQAAAAIAAAD///7/AQAAAAEAAAD///3/AQAAAAEAAAD///z/AQAAAAEAAAD///v/AQAAAAAAAAAAAPv/AQABAAAAAAABAPv/AQADAAIAAAACAPv/AQABAAAAAAADAPv/AQADAAIAAAAEAPv/AQABAAAAAAAFAPv/AQACAAAAAAAFAPz/AQACAAEAAAAFAP3/AQACAAEAAAAFAP7/AQACAAEAAAAFAP//AQACAAIAAAADAP//AQADAAIAAAAEAP//AQABAAIAAAACAP//AwAAAAAAAQA=")
+tile_set = ExtResource("1_igfgx")
+
+[node name="Furniture" type="TileMapLayer" parent="HouseTilemap"]
+tile_map_data = PackedByteArray("AAAEAPz/AgABAAEAAAAEAPv/AgACAAAAAAACAPv/AgADAAIAAAAAAPv/AgABAAAAAAAAAPz/AgAGAAIAAAAAAP3/AgADAAMAAAAAAP7/AgAHAAIAAAACAP3/AgADAAUAAAAEAP7/AgADAAAAAAA=")
+tile_set = ExtResource("1_igfgx")
